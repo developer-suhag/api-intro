@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <style>
+      h2 {
+        font-size: 36px;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px solid #000;
+        padding-bottom: 20px;
+      }
+      #todos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+      }
+      .todo-item {
+        background: #f8efba;
+        border: 2px solid #be2edd;
+        border-radius: 1em;
+        padding: 10px 30px;
+        text-align: center;
+      }
+      .todo-item h3 {
+        font-size: 20px;
+        color: #34495e;
+        text-transform: capitalize;
+        margin: 10px 0;
+      }
+      .todo-item p {
+        color: #2c3e50;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Todo List</h2>
+    <section id="todos"></section>
+    <script src="js/todo.js"></script>
+  </body>
+</html>
