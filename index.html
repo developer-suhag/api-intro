@@ -5,9 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API</title>
+    <style>
+      ul {
+        padding: 0;
+      }
+      .user-list {
+        list-style-type: none;
+        border: 1px solid #fd7272;
+        border-radius: 10px;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+      }
+      .name {
+        color: #2c3e50;
+        font-size: 24px;
+        margin: 10px 0;
+      }
+      .user-name {
+        margin: 5px 0;
+        color: #8e44ad;
+        font-size: 18px;
+      }
+      .email,
+      .phone {
+        font-size: 18px;
+        color: #00b894;
+        margin: 5px 0;
+      }
+      .text {
+        color: #636e72;
+        font-size: 16px;
+        margin: 5px;
+      }
+    </style>
   </head>
   <body>
     <h1>Hello API</h1>
+    <h3>All User</h3>
+    <div>
+      <ul id="users"></ul>
+    </div>
     <button onclick="loadData()">Load Data</button>
     <button onclick="loadUsers()">Load Users</button>
     <button onclick="loadPosts()">Load Posts</button>
