@@ -17,8 +17,14 @@ function loadUsers() {
 function loadPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => displayPosts(data))
 }
+
+/* function loadPosts() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(res => res.json())
+        .then(data => console.log(data))
+} */
 
 // function displayUser(data) {
 //     const ul = document.getElementById('users');
@@ -41,6 +47,7 @@ function loadPosts() {
 
 function displayUser(users) {
     const ul = document.getElementById('users');
+    document.getElementById('all-user').style.display = 'block';
     for (const user of users) {
         const li = document.createElement('li');
         li.classList.add('user-list')
@@ -57,5 +64,20 @@ function displayUser(users) {
             <span>Company: ${user.company.name} </span>
         `
         ul.appendChild(li)
+    }
+};
+
+
+function displayPosts(posts) {
+    const blogContainer = document.getElementById('blog-container')
+    document.getElementById('title').style.display = 'block'
+    for (const post of posts) {
+        const div = document.createElement('div');
+        console.log(post.title);
+        div.innerHTML = `
+            <h3>${post.title}</h3> 
+            <p>${post.body}</p>
+        `
+        blogContainer.appendChild(div)
     }
 }

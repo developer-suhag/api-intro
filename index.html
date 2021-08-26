@@ -37,17 +37,51 @@
         font-size: 16px;
         margin: 5px;
       }
+      section > h3,
+      #all-user {
+        text-align: center;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #ee5253;
+        display: none;
+      }
+      #blog-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        margin: 40px 0;
+      }
+      #blog-container div {
+        background-color: darkcyan;
+        color: white;
+        text-align: center;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+      #blog-container div h3 {
+        font-size: 24px;
+      }
     </style>
   </head>
   <body>
     <h1>Hello API</h1>
-    <h3>All User</h3>
-    <div>
-      <ul id="users"></ul>
-    </div>
     <button onclick="loadData()">Load Data</button>
     <button onclick="loadUsers()">Load Users</button>
     <button onclick="loadPosts()">Load Posts</button>
+
+    <div>
+      <h3 id="all-user">All User</h3>
+      <ul id="users"></ul>
+    </div>
+    <section>
+      <h3 id="title">Blog Posts</h3>
+      <div id="blog-container">
+        <!-- <div>1</div>
+        <div>2</div>
+        <div>3</div> -->
+      </div>
+    </section>
+
     <script src="js/api.js"></script>
   </body>
 </html>
